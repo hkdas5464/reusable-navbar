@@ -29,7 +29,7 @@ import React from 'react';
                      href={link.href}
                      className={`${textColor} hover:text-navbar-hover transition-colors`}
                    >
-                     {link.label}
+                     {link.label}hgrfrg
                    </a>
                  </li>
                ))}
