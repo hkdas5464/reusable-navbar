@@ -6,6 +6,8 @@ interface NavbarProps {
         href: string;
     }[];
     title?: string;
+    bgColor?: string;
+    textColor?: string;
 }
 declare const Navbar: React.FC<NavbarProps>;
 export default Navbar;

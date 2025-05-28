@@ -1,9 +1,11 @@
 import React from 'react';
-import './index.css';
+     import './index.css';
 
      interface NavbarProps {
        links?: { label: string; href: string }[];
        title?: string;
+       bgColor?: string;
+       textColor?: string;
      }
 
      const Navbar: React.FC<NavbarProps> = ({
@@ -13,17 +15,19 @@ import './index.css';
          { label: 'Contact', href: '/contact' },
        ],
        title = 'My App',
+       bgColor = 'navbar-bg',
+       textColor = 'navbar-text',
      }) => {
        return (
-         <nav className="bg-gray-800 p-4">
+         <nav className={`p-4 bg-${bgColor}`}>
            <div className="container mx-auto flex justify-between items-center">
-             <div className="text-white text-xl font-bold">{title}</div>
+             <div className={`text-${textColor} text-xl font-bold`}>{title}</div>
              <ul className="flex space-x-4">
                {links.map((link, index) => (
                  <li key={index}>
                    <a
                      href={link.href}
-                     className="text-white hover:text-gray-300 transition-colors"
+                     className={`${textColor} hover:text-navbar-hover transition-colors`}
                    >
                      {link.label}
                    </a>
